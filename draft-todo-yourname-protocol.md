@@ -19,11 +19,11 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Security Requirements for AI Agents"
+abbrev: "Agent Security Requirements"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-ni-a2a-ai-agent-security-requirements-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
