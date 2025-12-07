@@ -1,0 +1,199 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-12-07T01:28:25.731013+00:00",
+  "repo": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOQi4MZ87cgJUo",
+      "title": "Target audience",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/1",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "It is not clear who the target audience for this document is, please clarify in the intro.",
+      "createdAt": "2025-12-05T15:33:54Z",
+      "updatedAt": "2025-12-05T15:33:54Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOQi4MZ87cgJjS",
+      "title": "Secret management",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/2",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The words \"provisioning agent secrets and credentials\" imply that an agent need to physically hold secrets. Even for non-agent workload this doesn't need to be the case, when we use proper secret management and non-human authentication. For AI agents (which are vulnerable to PI) this is even more risky.",
+      "createdAt": "2025-12-05T15:34:14Z",
+      "updatedAt": "2025-12-05T15:34:14Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOQi4MZ87cgJwI",
+      "title": "WIMSE Perspective",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/3",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I suggest to add text that maps this model to the WIMSE one. Agents are IMO WIMSE workloads themselves.",
+      "createdAt": "2025-12-05T15:34:30Z",
+      "updatedAt": "2025-12-05T15:34:30Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOQi4MZ87cgKAo",
+      "title": "Credential Format",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/4",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The term \"Agent Certificate Authority\" implies that service creds are certificates. They don't have to be, and in WIMSE they're not.",
+      "createdAt": "2025-12-05T15:34:47Z",
+      "updatedAt": "2025-12-05T15:34:47Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOQi4MZ87cgKOA",
+      "title": "Document scope",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/5",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The document is named \"requirements\". It's mostly fine when you present an architectural model (components, responsibilities etc.), but I think you're going way beyond \"requirements\" when you discuss flows such as 3.1 and 3.2.",
+      "createdAt": "2025-12-05T15:35:04Z",
+      "updatedAt": "2025-12-05T15:35:04Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOQi4MZ87cgKY-",
+      "title": "Authz context",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/6",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "It's not clear from the document that the agent needs to carry both its non-human identity (NHI, a.k.a. service identity) and identity/identities it is associated with, primarily a human (user) identity.",
+      "createdAt": "2025-12-05T15:35:18Z",
+      "updatedAt": "2025-12-05T15:35:18Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOQi4MZ87cgKkA",
+      "title": "Agent 2-layer architecture",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/7",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "One of the unique properties of AI agents compared to normal (e.g. REST) services is that most of the work they do is passing data across APIs and in and out of LLMs. this makes them extremely vulnerable to promot injection (PI). As a result they cannot be trusted with any secrets. The best practice is to run all authentication at a lower layer, where the LLM doesn't see/influence any of it. Unfortunately I'm not aware of any widely accepted term for this architecture and these layers, but it's important to describe it here.",
+      "createdAt": "2025-12-05T15:35:33Z",
+      "updatedAt": "2025-12-05T15:35:33Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOQi4MZ87cgKvJ",
+      "title": "Venue section",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/8",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Please add a \"venue\" section to the YAML section at the top, to include the Github repo etc. https://github.com/cabo/kramdown-rfc/wiki/Syntax2#Venue",
+      "createdAt": "2025-12-05T15:35:47Z",
+      "updatedAt": "2025-12-05T15:35:47Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOQi4MZ87cgK7J",
+      "title": "3.1 typo",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/issues/9",
+      "state": "OPEN",
+      "author": "yaronf",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Issuarance",
+      "createdAt": "2025-12-05T15:36:04Z",
+      "updatedAt": "2025-12-05T15:36:04Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": []
+}
