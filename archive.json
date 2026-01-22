@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-20T01:25:54.258967+00:00",
+  "timestamp": "2026-01-22T01:28:22.743094+00:00",
   "repo": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
   "labels": [
     {
@@ -62,9 +62,17 @@
       "labels": [],
       "body": "It is not clear who the target audience for this document is, please clarify in the intro.",
       "createdAt": "2025-12-05T15:33:54Z",
-      "updatedAt": "2025-12-05T15:33:54Z",
+      "updatedAt": "2026-01-20T03:49:00Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "added: \n\n> The target audience of this document would be IETF security experts that wish to understand AI Agent's behaviorial patterns, so to evaluate if the proposed security requirements are worthy of further security designs.\n\nLet me know if this is appropriate or need changes",
+          "createdAt": "2026-01-20T03:49:00Z",
+          "updatedAt": "2026-01-20T03:49:00Z"
+        }
+      ]
     },
     {
       "number": 2,
@@ -78,9 +86,17 @@
       "labels": [],
       "body": "The words \"provisioning agent secrets and credentials\" imply that an agent need to physically hold secrets. Even for non-agent workload this doesn't need to be the case, when we use proper secret management and non-human authentication. For AI agents (which are vulnerable to PI) this is even more risky.",
       "createdAt": "2025-12-05T15:34:14Z",
-      "updatedAt": "2025-12-05T15:34:14Z",
+      "updatedAt": "2026-01-20T03:06:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "Totally agree. What I mean is that agent may need to reuse secret management modules on the platform it operates on, cloud secret manager or TEE/keystore/keychains on smart devices, and this needs setup. \n\nAgents should not bake their own security cake. I added a subsection of \"Secret Management\" in the next commit/PR",
+          "createdAt": "2026-01-20T03:06:38Z",
+          "updatedAt": "2026-01-20T03:06:38Z"
+        }
+      ]
     },
     {
       "number": 3,
@@ -94,9 +110,17 @@
       "labels": [],
       "body": "I suggest to add text that maps this model to the WIMSE one. Agents are IMO WIMSE workloads themselves.",
       "createdAt": "2025-12-05T15:34:30Z",
-      "updatedAt": "2025-12-05T15:34:30Z",
+      "updatedAt": "2026-01-20T03:40:04Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": " I think this whole work references/reuses the WIMSE architecture, and right now I dont know where to incorporate it. I have another work in here https://datatracker.ietf.org/doc/draft-ni-wimse-ai-agent-identity/, which is all about reusing WIMSE architecture for agent security. I added this reference to the architecture session, let me know if you have better suggestions.   \n\n> The above architecture is from the perspective of a service flow. From the identity management perspective, we recommend reusing IETF works like WIMSE. This draft {{I-D.draft-ni-wimse-ai-agent-identity-01}} discusses WIMSE applicability to Agentic AI.",
+          "createdAt": "2026-01-20T03:40:04Z",
+          "updatedAt": "2026-01-20T03:40:04Z"
+        }
+      ]
     },
     {
       "number": 4,
@@ -110,9 +134,17 @@
       "labels": [],
       "body": "The term \"Agent Certificate Authority\" implies that service creds are certificates. They don't have to be, and in WIMSE they're not.",
       "createdAt": "2025-12-05T15:34:47Z",
-      "updatedAt": "2025-12-05T15:34:47Z",
+      "updatedAt": "2026-01-20T03:48:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "Yes they dont have to be. It is just right now our implementation uses certificates. I changed it to Agent Credential Authority.\n\n> ACA (Agent Credential Authority): A trusted third party that issues and manages credentials for agents. Credential formats include but not limited to: X.509 certificates, identity tokens, etc.",
+          "createdAt": "2026-01-20T03:48:02Z",
+          "updatedAt": "2026-01-20T03:48:02Z"
+        }
+      ]
     },
     {
       "number": 5,
@@ -126,9 +158,17 @@
       "labels": [],
       "body": "The document is named \"requirements\". It's mostly fine when you present an architectural model (components, responsibilities etc.), but I think you're going way beyond \"requirements\" when you discuss flows such as 3.1 and 3.2.",
       "createdAt": "2025-12-05T15:35:04Z",
-      "updatedAt": "2025-12-05T15:35:04Z",
+      "updatedAt": "2026-01-20T03:53:33Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "you are right. it is just im trying to give a overall service flow overview, so we can spot where we need security designs.\n\nany suggestions?",
+          "createdAt": "2026-01-20T03:53:33Z",
+          "updatedAt": "2026-01-20T03:53:33Z"
+        }
+      ]
     },
     {
       "number": 6,
@@ -142,9 +182,17 @@
       "labels": [],
       "body": "It's not clear from the document that the agent needs to carry both its non-human identity (NHI, a.k.a. service identity) and identity/identities it is associated with, primarily a human (user) identity.",
       "createdAt": "2025-12-05T15:35:18Z",
-      "updatedAt": "2025-12-05T15:35:18Z",
+      "updatedAt": "2026-01-20T04:06:51Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "I think this is a more profound problem that needs further discussion. Whether or not the agent need to carry both NHI and human identity depends on what we do with the double identity. Usually it is for access control and telemetry purposes. Consider access control first, personally I think there are 2 possibilities:\n\n1. whatever the authorization model used in the enterprise itself applies -- Role-based Access Control (RBAC) Attribute-based Access Control (ABAC), Adaptive Access Control (AdBAC), Capability based Access Control... This leaves 2 cases:\n    1. The agent carry the identity and inherit access rights from its owner (a human or a department). Carring such human identity will help security control points make decisions with sufficient context, and to the discretion of its internal security policy.\n    2. The agent does not carry the identity from its owner. It carries independent security contexts rich enough for access control.\n\n2. We missed something important that requires a new authorization model completely. \n\nI added them in the Access Control Section as discussion placeholder. ",
+          "createdAt": "2026-01-20T04:01:22Z",
+          "updatedAt": "2026-01-20T04:06:51Z"
+        }
+      ]
     },
     {
       "number": 7,
@@ -158,9 +206,17 @@
       "labels": [],
       "body": "One of the unique properties of AI agents compared to normal (e.g. REST) services is that most of the work they do is passing data across APIs and in and out of LLMs. this makes them extremely vulnerable to promot injection (PI). As a result they cannot be trusted with any secrets. The best practice is to run all authentication at a lower layer, where the LLM doesn't see/influence any of it. Unfortunately I'm not aware of any widely accepted term for this architecture and these layers, but it's important to describe it here.",
       "createdAt": "2025-12-05T15:35:33Z",
-      "updatedAt": "2025-12-05T15:35:33Z",
+      "updatedAt": "2026-01-20T04:13:35Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "If I understand correctly, you suggest layed designs that seperate business logic which the agent CAN touch, and that the security logic which the agent CANNOT touch. \n\nI think a layered design is a MUST. But I will have to do another SOTA search if there are running protocols or practices out there for this purpose. Maybe this is a good discussion point in the next IETF? ",
+          "createdAt": "2026-01-20T04:13:05Z",
+          "updatedAt": "2026-01-20T04:13:35Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -174,9 +230,17 @@
       "labels": [],
       "body": "Please add a \"venue\" section to the YAML section at the top, to include the Github repo etc. https://github.com/cabo/kramdown-rfc/wiki/Syntax2#Venue",
       "createdAt": "2025-12-05T15:35:47Z",
-      "updatedAt": "2025-12-05T15:35:47Z",
+      "updatedAt": "2026-01-20T04:16:34Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "Thanks for the pointer, I added the venue section. But I am yet not sure what venue is the best suited one, so it is just a placeholder for now. \n\nAny suggestions? A2A or WIMSE?",
+          "createdAt": "2026-01-20T04:16:34Z",
+          "updatedAt": "2026-01-20T04:16:34Z"
+        }
+      ]
     },
     {
       "number": 9,
@@ -190,10 +254,45 @@
       "labels": [],
       "body": "Issuarance",
       "createdAt": "2025-12-05T15:36:04Z",
-      "updatedAt": "2025-12-05T15:36:04Z",
+      "updatedAt": "2026-01-20T04:17:46Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "body": "fixed with issuance",
+          "createdAt": "2026-01-20T04:17:46Z",
+          "updatedAt": "2026-01-20T04:17:46Z"
+        }
+      ]
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 10,
+      "id": "PR_kwDOQi4MZ86-H_rG",
+      "title": "Fixing Issue #1 to #9",
+      "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/pull/10",
+      "state": "OPEN",
+      "author": "liuchunchi",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixing Issue #1 to #9\r\n\r\n@yaronf Hello Yaron, I proposed changes that tries to address the issue #1 through #9. Please let me know if you like it or not. \r\n\r\nIf the fixes is satisfactory, you can close the corresponding issue at your discretion. Thanks. ",
+      "createdAt": "2026-01-20T04:22:28Z",
+      "updatedAt": "2026-01-20T04:22:41Z",
+      "baseRepository": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "30d7cfbe62109133464ad407479d5960277225b4",
+      "headRepository": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
+      "headRefName": "rev-peter-issue1to9",
+      "headRefOid": "9da8d5dd845fc8d6baecb9b808fa1e45d51c4763",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
