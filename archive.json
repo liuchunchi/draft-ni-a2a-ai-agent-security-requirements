@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-15T02:00:31.588722+00:00",
+  "timestamp": "2026-03-01T02:03:07.065553+00:00",
   "repo": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
   "labels": [
     {
@@ -273,24 +273,26 @@
       "id": "PR_kwDOQi4MZ86-H_rG",
       "title": "Fixing Issue #1 to #9",
       "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/pull/10",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "liuchunchi",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Fixing Issue #1 to #9\r\n\r\n@yaronf Hello Yaron, I proposed changes that tries to address the issue #1 through #9. Please let me know if you like it or not. \r\n\r\nIf the fixes is satisfactory, you can close the corresponding issue at your discretion. Thanks. ",
       "createdAt": "2026-01-20T04:22:28Z",
-      "updatedAt": "2026-01-20T04:22:41Z",
+      "updatedAt": "2026-02-28T02:57:37Z",
       "baseRepository": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
       "baseRefName": "main",
       "baseRefOid": "30d7cfbe62109133464ad407479d5960277225b4",
       "headRepository": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
       "headRefName": "rev-peter-issue1to9",
       "headRefOid": "9da8d5dd845fc8d6baecb9b808fa1e45d51c4763",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-02-28T02:57:37Z",
+      "mergedAt": "2026-02-28T02:57:37Z",
+      "mergedBy": "liuchunchi",
+      "mergeCommit": {
+        "oid": "148952614238819e74db5143e190bea8b02115c5"
+      },
       "comments": [],
       "reviews": []
     },
@@ -299,26 +301,55 @@
       "id": "PR_kwDOQi4MZ87DtbJy",
       "title": "Updates ",
       "url": "https://github.com/liuchunchi/draft-ni-a2a-ai-agent-security-requirements/pull/11",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "NiYuan224",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Updates include:\r\n- Adding proofs to credential requests.\r\n- Adding agent discovery.\r\n- Enhancing the access control section with fine-grained policy enforcement, A2A context, and observability.\r\n",
       "createdAt": "2026-02-14T02:34:24Z",
-      "updatedAt": "2026-02-14T02:34:25Z",
+      "updatedAt": "2026-02-28T08:28:59Z",
       "baseRepository": "liuchunchi/draft-ni-a2a-ai-agent-security-requirements",
       "baseRefName": "main",
-      "baseRefOid": "30d7cfbe62109133464ad407479d5960277225b4",
+      "baseRefOid": "148952614238819e74db5143e190bea8b02115c5",
       "headRepository": "NiYuan224/draft-ni-a2a-ai-agent-security-requirements",
       "headRefName": "NiYuan224-patch-1",
-      "headRefOid": "b535eb387438f1428dc8028ee7ec30b5e893d61e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "190b4341cd4ad6c0cb774a5a28ee3c060fa2e516",
+      "closedAt": "2026-02-28T08:28:58Z",
+      "mergedAt": "2026-02-28T08:28:58Z",
+      "mergedBy": "liuchunchi",
+      "mergeCommit": {
+        "oid": "de15913a82426bf2a965473e47cbd2b88c301b59"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOQi4MZ87mq0zQ",
+          "commit": {
+            "abbreviatedOid": "b535eb3"
+          },
+          "author": "liuchunchi",
+          "authorAssociation": "OWNER",
+          "state": "CHANGES_REQUESTED",
+          "body": "please fix them (and resolve conflicts, if any) ",
+          "createdAt": "2026-02-28T03:06:24Z",
+          "updatedAt": "2026-02-28T04:01:01Z",
+          "comments": [
+            {
+              "originalPosition": 53,
+              "body": "```suggestion\n* Credential Request: During a credential request, the agent must provide multiple proofs of its legitimacy, could include, for example, but not limited to: \n```",
+              "createdAt": "2026-02-28T03:06:24Z",
+              "updatedAt": "2026-02-28T04:01:01Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "```suggestion\n  * Remote Attestation Evidence or Result: A set of security-relevant claims about the Target Environment submitted to a RATS Verifier (could be the ACA), which reveals operational status, health, configuration, or construction.\n```",
+              "createdAt": "2026-02-28T03:06:40Z",
+              "updatedAt": "2026-02-28T04:01:02Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
